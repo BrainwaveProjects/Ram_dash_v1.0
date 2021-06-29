@@ -1503,8 +1503,8 @@ body {
 /*TEST*/
 .test-wrap {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+    grid-template-rows: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
 }
 .test-wrap > div {
     grid-column: span 1;
@@ -1513,8 +1513,100 @@ body {
     transition: 0.1s;
 }
 .test-wrap > div:hover {
-    background: rgba(0, 147, 201,0.8);
+    background: rgba(192, 57, 43,0.8);
     transition: 0.1s;
+}
+.test-wrap > div > div {
+    height: 100%;
+}
+.test-wrap > div > div iframe {
+    height: 100%;
+    width: 100%;
+}
+.test-wrap .sml-stat {
+    text-align: right;
+    padding: 8px;
+    position: relative;
+}
+.test-wrap .sml-stat > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 2.4rem;
+    height: 100%;
+    font-size: 2rem;
+    padding: 0 8px;
+    background: #2e86de;
+    display: table;
+}
+.test-wrap .sml-stat:nth-child(2n+1) > span {
+    background: #01a3a4;
+}
+.test-wrap .sml-stat > span i {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.test-wrap .sml-stat > div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.test-wrap .sml-stat h2 {
+    flex: 1;
+    font-size: 0.9rem;
+    position: relative;
+}
+.test-wrap .sml-stat h2:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    height: 1px;
+    width: 50%;
+    background: #fff
+}
+.test-wrap .sml-stat h1 {
+    flex: 1;
+    font-size: 1.75rem;
+}
+.test-wrap .sml-stat p {
+    color: #25d366;
+    font-size: 0.8rem;
+    position:absolute;
+    right: 0;
+    bottom: 0;
+}
+.test-wrap .element {
+}
+.test-wrap .element > div h2 {
+    padding: 4px 0;
+    background: rgba(0,0,0,0.4);
+}
+.test-wrap .element > div > ul {
+    margin: 0 auto;
+    width: 70%;
+}
+.test-wrap .element > div > ul > li {
+    text-align: left;
+    padding: 4px 0;
+}
+.test-wrap .element > div > ul > li > ul > li {
+    font-size:0.9rem;
+    padding: 4px 0 4px 8px;
+}
+.test-wrap .element > div > ul > li > ul > li > ul > li {
+    padding: 4px 0 4px 8px;
+}
+.test-wrap .element > div > ul > li > ul > li > ul > li > ul > li {
+    padding: 4px 0 4px 8px;
+}
+.test-wrap .element > div > ul > li > ul > li > ul > li > ul > li > ul > li  {
+    padding: 4px 0 4px 8px;
 }
 /*WALLBOARD*/
 .wb-tot {
