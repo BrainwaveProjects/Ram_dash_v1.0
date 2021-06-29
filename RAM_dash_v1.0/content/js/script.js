@@ -1,8 +1,14 @@
-$(document).ready(function(){
+$(document).ready(function () {
 
     //TEST IF WORKING
-    console.log("READY")
-  
+    console.log("READY");
+
+    //LOAD UI
+    var main = $('.main-container'),
+        pre = '<div style="padding:10px 0; background:red; color: #fff;text-align:center;">PREPEND</div>',
+        ap = '<div style="padding:10px 0; background:red; color: #fff;text-align:center;">APPEND</div>',
+        pathname = window.location.pathname;
+
     //GET DAY, DATE & TIME
     var d = new Date();
     //GET DAY
@@ -55,47 +61,7 @@ $(document).ready(function(){
 
     $('#day').html(day);
     $('#date').html(date);
-
-    //CHANGE PAGES
-    var h = $('#home'),
-        cc = $('#cc'),
-        mfi = $('#mfi'),
-        p = $('#prod'),
-        q = $('#query'),
-        bd = $('#bd'),
-        r = $('#recLink'),
-        a = $('#aedo'),
-        s = $('#settings');
-    h.click(function () {
-        document.location.href = '/default.aspx'
-    });
-    cc.click(function () {
-        document.location.href = '/cashCollections.aspx'
-    });
-    mfi.click(function () {
-        document.location.href = '/MFI.aspx'
-    });
-    p.click(function () {
-        document.location.href = '/productivity.aspx'
-    });
-    bd.click(function () {
-        document.location.href = '/badDebts.aspx'
-    });
-    a.click(function () {
-        document.location.href = '/aedo.aspx'
-    });
-    s.click(function () {
-        document.location.href = '/settings.aspx'
-    });
-    
-    //DIGITS
-    $.fn.digits = function () {
-        return this.each(function () {
-            $(this).text($(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,"));
-        })
-    };
-    $('.digits').digits();
-    
+    $('#fdate').html(date);
 
 });
 
