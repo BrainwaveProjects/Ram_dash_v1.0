@@ -22,8 +22,13 @@
                 </div>
             </div>
             <div class="head-search">
-                <input type="text" class="dark" placeholder="Find leads, customers, and more.."/>
-                <i class="fas fa-search"></i>
+                <%--<input type="text" class="dark" placeholder="Find leads, customers, and more.."/>
+                <i class="fas fa-search"></i>--%>
+                <div>
+                    <h1>Username</h1>
+                    <h2>Position</h2>
+                    <h3>Division / Region / Branch</h3>
+                </div>
             </div>
             <div class="head-stats">
                 <div class="stats-time">
@@ -73,15 +78,15 @@
         <div class="main-body">
             <div class="row test-wrap">    
                 <!-- 1ST COLUMN -->            
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 1 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 1 / span 1;">
                     <span><i class="fas fa-hand-holding-usd"></i></span>
                     <div>
-                        <h2>Receipts</h2>
+                        <h2>Current Balance</h2>
                         <h1>R 500,000.00</h1>
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 2 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 2 / span 1;">
                     <span><i class="fas fa-user-friends"></i></span>
                     <div>
                         <h2>Total Accounts</h2>
@@ -89,7 +94,7 @@
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 3 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 3 / span 1;">
                     <span><i class="fas fa-user-check"></i></span>
                     <div>
                         <h2>Accounts Activated</h2>
@@ -97,7 +102,7 @@
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 4 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 4 / span 1;">
                     <span><i class="fas fa-percentage"></i></span>
                     <div>
                         <h2>% Paid</h2>
@@ -105,7 +110,7 @@
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 5 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 5 / span 1;">
                     <span><i class="fas fa-cut"></i></span>
                     <div>
                         <h2>Cut Instalment</h2>
@@ -113,7 +118,7 @@
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 6 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 6 / span 1;">
                     <span><i class="fas fa-percentage"></i></span>
                     <div>
                         <h2>% Cut Instalment</h2>
@@ -121,81 +126,123 @@
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 7 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 7 / span 1;">
                     <span><i class="fas fa-credit-card"></i></span>
                     <div>
-                        <h2>Placeholder</h2>
-                        <h1>50%</h1>
+                        <h2>Expected Instalment</h2>
+                        <h1>R 250,000.00</h1>
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
-                <div class="shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 8 / span 1;">
+                <div class="col-1 shadow sml-stat" style="grid-column: 1 / span 1;grid-row: 8 / span 1;">
                     <span><i class="fas fa-globe-africa"></i></span>
                     <div>
-                        <h2>Placeholder</h2>
-                        <h1>50%</h1>
+                        <h2>Overage</h2>
+                        <h1>R 250,000.00</h1>
                         <p><i class="fas fa-caret-up"></i>11%</p>
                     </div>
                 </div>
                 <!-- 2ND COLUMN -->   
-                <div class="shadow" style="grid-column: 2 / span 2;grid-row: 1 / span 2;"><div></div></div>
-                <div class="shadow" style="grid-column: 2 / span 2;grid-row: 3 / span 3;"><div></div></div>
+                <div class="col-2 shadow element" style="grid-column: 2 / span 2;grid-row: 1 / span 1;">
+                    <div>
+                        <h2>Avg. p/Branch</h2>
+                        <div class="avg-wrap">
+                            <div>
+                                <h3>Accounts</h3>
+                            </div>
+                            <div><h3>Paid</h3></div>
+                            <div><h3>Paid %</h3></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2 shadow element" style="grid-column: 2 / span 2;grid-row: 2 / span 1;"><div><h2>Avg. p/Region</h2><div class="avg-wrap"><div><h3>Accounts</h3></div><div><h3>Paid</h3></div><div><h3>Paid %</h3></div></div></div></div>
+                <div class="col-2 shadow element" style="grid-column: 2 / span 2;grid-row: 3 / span 1;"><div><h2>Avg. p/Division</h2><div class="avg-wrap"><div><h3>Accounts</h3></div><div><h3>Paid</h3></div><div><h3>Paid %</h3></div></div></div></div>
+                <div class="col-2 shadow element" style="grid-column: 2 / span 2;grid-row: 4 / span 1;"><div><h2>Avg. p/Country</h2><div class="avg-wrap"><div><h3>Accounts</h3></div><div><h3>Paid</h3></div><div><h3>Paid %</h3></div></div></div></div>
+                <div class="col-2 shadow element" style="grid-column: 2 / span 2;grid-row: 5 / span 1;"><div><h2>Avg. p/Chain</h2><div class="avg-wrap"><div><h3>Accounts</h3></div><div><h3>Paid</h3></div><div><h3>Paid %</h3></div></div></div></div>
+                <%--<div class="col-2 shadow element" style="grid-column: 2 / span 2;grid-row: 6 / span 3;"><div><h2>Title</h2></div></div>--%>
                 <!-- 3RD COLUMN -->   
-                <div class="shadow element" style="grid-column: 4 / span 1;grid-row: 1 / span 8;">
+                <div class="col-3 shadow element country-list" style="grid-column: 4 / span 1;grid-row: 1 / span 5;">
                     <div>
                         <h2>Country</h2>
                         <ul>
-                            <li>South Africa
+                            <li class="lvl-1">South Africa
                                 <ul>
-                                    <li>Division
+                                    <li class="lvl-2">Division
                                         <ul>
-                                            <li>Region
+                                            <li class="lvl-3">Region
                                                 <ul>
-                                                    <li>Branch
+                                                    <li class="lvl-4">Branch
                                                         <ul>
-                                                            <li>Branch Manager</li>
-                                                            <li>Debtors Clerk</li>
-                                                            <li>Debtors Clerk</li>
+                                                            <li class="lvl-5">Branch Manager</li>
+                                                            <li class="lvl-5">Debtors Clerk</li>
+                                                            <li class="lvl-5">Debtors Clerk</li>
                                                         </ul>
                                                     </li>
-                                                    <li>Branch</li>
-                                                    <li>Branch</li>
-                                                    <li>Branch</li>
+                                                    <li class="lvl-4">Branch</li>
+                                                    <li class="lvl-4">Branch</li>
+                                                    <li class="lvl-4">Branch</li>
                                                 </ul>
                                             </li>
-                                            <li>Region</li>
-                                            <li>Region</li>
-                                            <li>Region</li>
+                                            <li class="lvl-3">Region</li>
+                                            <li class="lvl-3">Region</li>
+                                            <li class="lvl-3">Region</li>
                                         </ul>
                                     </li>
-                                    <li>Division</li>
-                                    <li>Division</li>
-                                    <li>Division</li>
+                                    <li class="lvl-2">Division</li>
+                                    <li class="lvl-2">Division</li>
+                                    <li class="lvl-2">Division</li>
                                 </ul>
                             </li>
-                            <li>Swaziland</li>
-                            <li>Botswana</li>
-                            <li>Lesotho</li>
-                            <li>Namibia</li>
+                            <li class="lvl-1">Swaziland</li>
+                            <li class="lvl-1">Botswana</li>
+                            <li class="lvl-1">Lesotho</li>
+                            <li class="lvl-1">Namibia</li>
                         </ul>
                     </div>
                 </div>
                 <!-- 4th COLUMN -->   
-                <div class="shadow" style="grid-column: 5 / span 4;grid-row: 1 / span 5;">
+                <div class="col-4 shadow stats-wrap" style="grid-column: 5 / span 4;grid-row: 1 / span 8;">
                     <div>
-                        <div class="mapouter">
+                        <%--<div class="mapouter">
                             <div class="gmap_canvas">
                                 <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=south%20africa&t=&z=5&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                                 <style>.mapouter{position:relative;text-align:center;height:100%;width:100%;}</style>
                                 <style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
                             </div>
-                        </div>
+                        </div>--%>
+                        <div><h2>Accounts</h2></div>
+                        <div><h2>Active Accounts</h2></div>
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <!---->
+                        <div><h2>Current Balance</h2></div>
+                        <div><h2>Open Balance</h2></div>
+                        <div><h2>Arrears Balance</h2></div>
+                        <div><h2>test</h2></div>
+                        <!---->
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <!---->
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <!---->
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
+                        <div><h2>test</h2></div>
                     </div>
                 </div>
                 <!-- LAST ROW -->   
-                <div class="shadow" style="grid-column: 2 / span 2;grid-row: 6 / span 3;"><div></div></div>
-                <div class="shadow" style="grid-column: 5 / span 3;grid-row: 6 / span 3;"><div></div></div>
-                <div class="shadow" style="grid-column: 8 / span 1;grid-row: 6 / span 3;"><div></div></div>
+                <%--<div class="shadow" style="grid-column: 2 / span 2;grid-row: 6 / span 3;"><div></div></div>--%>
+                <div class="col-5 shadow element" style="grid-column: 2 / span 1;grid-row: 6 / span 3;"><div><h2>Lewis</h2></div></div>
+                <div class="col-5 shadow element" style="grid-column: 3 / span 1;grid-row: 6 / span 3;"><div><h2>Beares</h2></div></div>
+                <div class="col-5 shadow element" style="grid-column: 4 / span 1;grid-row: 6 / span 3;"><div><h2>Best Home & Electric</h2></div></div>
+                <%--<div class="col-5 shadow element" style="grid-column: 7 / span 1;grid-row: 6 / span 3;"><div><h2>UFO</h2></div></div>
+                <div class="col-5 shadow element" style="grid-column: 8 / span 1;grid-row: 6 / span 3;"><div><h2>Inspire By Beares</h2></div></div>--%>
             </div>
         </div>
     </div>
