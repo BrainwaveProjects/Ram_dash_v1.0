@@ -49,6 +49,9 @@ ul {
 h1,h2,h3,h4,h5{
     font-weight:100;
 }
+*, ::after, ::before {
+    box-sizing: initial;
+}
 /*MAIN*/
 html,body,form{
     height: 100%;
@@ -62,6 +65,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    line-height:normal;
 }
 .effect {
     transition:0.1s;
@@ -348,7 +352,7 @@ body {
 /*NAV*/
 .nav {
     background:#3d3d3d;
-    width:3.5rem;
+    /*width:3.5rem;*/
     height:92%;
     transition:0.2s;
     position: fixed;
@@ -402,7 +406,7 @@ body {
 }
 .nav ul li span {
     display: inline-block;
-    transition:0.2s;
+    /*transition:0.2s;*/
     white-space:nowrap;
     overflow:hidden;
     width:0;
@@ -640,11 +644,11 @@ body {
 .main-body::-webkit-scrollbar {
   display: none;
 }
-.main-body .row {
+.main-body .line {
     flex: 1;
     flex-wrap: wrap;
 }
-.main-body .row > h2 {
+.main-body .line > h2 {
     text-align: center;
     color: var(--dark);
     background: rgba(245,245,245,0.8);
@@ -820,10 +824,10 @@ body {
     padding: 4px 0;
 }
 /*ROWS*/
-.row {
+.line {
     padding: 4px 0;
 }
-.row > div {
+.line > div {
     border-radius: 4px;
     overflow: hidden;
     text-align: center;
@@ -831,7 +835,7 @@ body {
     /*background: rgba(0,0,0,0.8);*/
     background: linear-gradient(to top right, rgba(51, 51, 51, 0.9), rgba(68, 68, 68, 0.9));
 }
-.row > div > h5 {
+.line > div > h5 {
     background: var(--main);
     font-weight: 100;
     text-align: center;
@@ -851,16 +855,16 @@ body {
     margin: 0 2px;
     text-align: center;
 }
-.row > div > div > div > h5, .row > div > div > div > div > h5  {
+.line > div > div > div > h5, .line > div > div > div > div > h5  {
     background: rgba(0,0,0,0.2);
     font-weight: 100;
     padding: 0;
     font-size:0.85rem;
 }
-.row > div > div > div > p, .row > div > div > div > div > p  {
+.line > div > div > div > p, .line > div > div > div > div > p  {
     padding: 2px 0;
 }
-.row > div > div > div > div:first-child > p  {
+.line > div > div > div > div:first-child > p  {
     border-right: 1px solid rgba(0,0,0,0.2);
 }
 .camp-wrap .contact-block > div, .app-wrap .contact-block > div {
@@ -1515,10 +1519,10 @@ body {
     background: var(--main) !important;
 }
 /*COLUMNS*/
-/*.col-1 {
+/*.col1 {
     border-right:2px solid #f9f9f9
 }
-.col-2 {
+.col2 {
     border-left:2px solid #f9f9f9
 }*/
 /*TEST*/
@@ -1601,12 +1605,19 @@ body {
     position:absolute;
     right: 0;
     bottom: 0;
+    display:none;
 }
 .test-wrap .element {
 }
 .element > div h2 {
     padding: 4px 0;
     background: rgba(0,0,0,0.4);
+}
+.element > div > img {
+    width: 33%;
+    display: block;
+    margin: 0 auto;
+    position:relative;
 }
 .test-wrap .element > div > ul {
     margin: 0 auto;
@@ -1647,6 +1658,7 @@ body {
 }
 /*COUNTRY LIST*/
 .country-list {
+    overflow: scroll;
 }
 .country-list .lvl-1 {
     
@@ -1679,23 +1691,43 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.4);
 }
 .country-list > div ul {
-    display:none;
+    /*display:none;*/
 }
 .country-list > div > ul {
     display:block;
     cursor:pointer;
     transition:0.2s;
 }
-.country-list > div > ul > li:hover {
+.country-list > div ul >li {
+    text-align: left;
+    padding: 2px 0 2px 1rem;
+    cursor: pointer;
+}
+.country-list > div ul li:hover {
     transition:0.2s;
-    background: rgba(0,0,0,0.2);
-    padding-left: 4px;
+    background: rgba(0,0,0,0.2) !important;
+    padding-left: 1.2rem;
+}
+.country-list .accordion {
+}
+.country-list .accordion .accordion-item {
+    background: inherit;
+    border: none;
+}
+.country-list .accordion-body {
+    padding: 8px 0;
+}
+.country-list .accordion-button {
+    padding: 8px;
+    width: 90%;
+    margin: 0 auto;
+    background: inherit;
+    color: inherit;
 }
 /*STATS*/
-.stats-wrap {
-}
-.stats-wrap:hover {
-    background:linear-gradient(to top right, rgba(51, 51, 51, 0.9), rgba(68, 68, 68, 0.9)) !important;
+.stats-wrap, .country-list {
+    background: linear-gradient(to top right, rgba(9, 132, 227, 0.9), rgba(116, 185, 255, 0.9)) !important;
+    transition:0.2s;
 }
 .stats-wrap > div {
     display:grid;
@@ -1715,17 +1747,62 @@ body {
     padding: 2px 0;
     background: rgba(0,0,0,0.4);
 }
-
-
-
-
-
-
-
-
-
-
-
+/*CHAINS*/
+.chains > div > h2 {
+    height: 3rem;
+}
+.chains > div img {
+    height:100%;
+}
+.chains > div .bhe-img {
+    width: 75%;
+    height: initial;
+    margin-top: -17%;
+}
+.chains .chain-block {
+    display: flex;
+    flex-direction: column;
+}
+.chains .chain-block > div {
+    flex: 1;
+}
+.chains .chain-block > div h4 {
+    background: rgba(255,255,255,0.1);
+    font-size: 0.9rem;
+    padding: 2px 0;
+}
+.chains .chain-block > div p {
+    padding: 8px 0;
+}
+/*TOP PRODUCTS*/
+.top-prods {
+}
+.top-prods table {
+    width: 100%;
+}
+.top-prods table tr {
+    font-size:0.9rem;
+}
+.top-prods table tbody tr:nth-child(2n+1) {
+    background: rgba(0,0,0,0.2);
+}
+.top-prods table th {
+    font-weight: 100;
+    background: rgba(255,255,255,0.1);
+    padding: 2px 0;
+    font-size:0.8rem;
+    border-right: 1px solid rgba(0,0,0,0.4)
+}
+.top-prods table th:last-child {
+    border-right: none;
+}
+.top-prods table td {
+    padding: 2px 0;
+    border-right: 1px solid rgba(255,255,255,0.1)
+}
+.top-prods table td:last-child {
+    border-right: none;
+}
 
 
 
@@ -1812,4 +1889,44 @@ body {
 }
 .disabled {
     opacity:0.6;
+}
+
+@media screen and (max-width: 1550px) {
+    .main-body {
+        padding-left: 4%;
+    }
+    .test-wrap .sml-stat h1,.chains .chain-block > div p {
+        font-size: 1.2rem;
+    }
+    .test-wrap .sml-stat h2 {
+        font-size: 0.8rem;
+    }
+    .test-wrap .sml-stat > span {
+        width: 2rem;
+        font-size: 1.5rem;
+    }
+    .element > div h2,.stats-wrap > div > div > h2 {
+        font-size: 0.9rem;
+    }
+    .avg-wrap > div h3,.chains .chain-block > div h4 {
+        font-size: 0.8rem;
+    }
+    .head-search > div > h1 {
+        font-size:1rem;
+    }
+    .head-search > div > h2 {
+        font-size:0.9rem;
+    }
+    .head-search > div {
+        padding: 5px 0;
+    }
+    .head-search > div > h3 {
+        font-size:0.8rem;
+    }
+    .accordion-flush .accordion-item .accordion-button {
+        font-size: 0.9rem;
+    }
+    .country-list > div ul > li {
+        font-size: 0.9rem;
+    }
 }

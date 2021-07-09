@@ -63,5 +63,8 @@ $(document).ready(function () {
     $('#date').html(date);
     $('#fdate').html(date);
 
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 });
 
