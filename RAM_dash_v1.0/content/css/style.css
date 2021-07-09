@@ -1709,6 +1709,7 @@ body {
     padding-left: 1.2rem;
 }
 .country-list .accordion {
+    /*overflow-y: scroll*/
 }
 .country-list .accordion .accordion-item {
     background: inherit;

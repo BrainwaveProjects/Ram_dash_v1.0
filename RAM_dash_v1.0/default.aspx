@@ -299,7 +299,7 @@
                 <!-- 4th COLUMN -->   
                 <div class="col4 shadow stats-wrap" style="grid-column: 5 / span 4;grid-row: 1 / span 8;">
                     <div>
-                        <div><h2>Accounts</h2></div>
+                        <div data-toggle="tooltip" data-placement="right" title="" data-bs-original-title="Count of Accounts"><h2>Accounts</h2></div>
                         <div><h2>Accounts Activated</h2></div>
                         <div><h2>Sub-Accounts</h2></div>
                         <div><h2>Sub Accounts Activated</h2></div>
@@ -314,10 +314,10 @@
                         <div><h2>test</h2></div>
                         <div><h2>test</h2></div>
                         <!---->
-                        <div><h2>BD 6+</h2></div>
-                        <div><h2>BD 3+</h2></div>
-                        <div><h2>BD 2</h2></div>
-                        <div><h2>BD 1</h2></div>
+                        <div data-toggle="tooltip" data-placement="right" title="" data-bs-original-title="Bad Debt Account exceeding 6 months +"><h2>BD 6+</h2></div>
+                        <div data-toggle="tooltip" data-placement="right" title="" data-bs-original-title="Bad Debt Account exceeding 3 months +"><h2>BD 3+</h2></div>
+                        <div data-toggle="tooltip" data-placement="right" title="" data-bs-original-title="Bad Debt Account exceeding 2 months"><h2>BD 2</h2></div>
+                        <div data-toggle="tooltip" data-placement="right" title="" data-bs-original-title="Bad Debt Account exceeding 1 month"><h2>BD 1</h2></div>
                         <!---->
                         <div><h2>BD 6+ Balance</h2></div>
                         <div><h2>BD 3+ Balance</h2></div>
